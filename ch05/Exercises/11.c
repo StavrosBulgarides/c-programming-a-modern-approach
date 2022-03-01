@@ -2,7 +2,11 @@
 
 int main(void)
 {
-    int area_code = 706;
+    int area_code;
+    
+    printf("Enter an area code: ");
+    scanf("%d", &area_code);
+    printf("\nThe area code is for ");
 
     switch (area_code) {
         case 229: 

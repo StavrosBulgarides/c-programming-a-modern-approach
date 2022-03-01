@@ -8,9 +8,9 @@ int main(void)
 
     mins_since_midnight = (hour * 60) + minute;
 
-    if (mins_since_midnight <= ((8 * 60) + (103 / 2)))
+    if (mins_since_midnight <= ((8 * 60) + (103 / 2)))      // Initial time of 8:00 and 1/2 way to the next time
         printf("Closest departure time is 8:00 AM., arriving at 10:16 AM");
-    else if (mins_since_midnight < ((9 * 60) + 43) + (96 / 2))
+    else if (mins_since_midnight < ((9 * 60) + 43) + (96 / 2))  // Less than the time (will capture the hanging balance from the previous condition)
         printf("Closest departure time is 9:43 AM., arriving at 11:52 AM");
     else if (mins_since_midnight < ((11 * 60) + 19) + (88 / 2))
         printf("Closest departure time is 11:19 AM., arriving at 1:31 PM");
