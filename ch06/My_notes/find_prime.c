@@ -9,7 +9,7 @@ int main(void)
     printf("Enter a number: ");
     scanf("%d", &n);
 
-    for (d = 2; d < n; d++)
+    for (d = 2; d < n; d++)     //work out how this works
         if (n % d == 0)
             break;
     if (d < n)
