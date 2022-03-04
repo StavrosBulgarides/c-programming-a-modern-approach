@@ -4,7 +4,7 @@ int main(void)
 {
     int d, m, y, ed, em, ey, count = 0;
 
-    for (;;) {
+    for (;;) {      //infinite loop until broken/exited
 
         printf("Enter a date (mm/dd/yy) (0/0/0 to terminate): ");
         scanf("%d /%d /%d", &m, &d, &y);
