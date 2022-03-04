@@ -8,7 +8,7 @@ int main(void)
     n = 1429;
     printf("Checking if %d is prime\n", n);
 
-    for (d = 2; (d * d) <= n; d++) {
+    for (d = 2; (d * d) <= n; d++) {        //test up to the square root of n
         printf("Testing %d\n", d);
 
         if (n % d == 0) {
