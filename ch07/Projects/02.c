@@ -12,7 +12,7 @@ int main(void)
     for (i = 1; i <= n; i++) {
         printf("%10d%10d\n", i, i * i);
 
-        if (i % 24 == 0) {
+        if (i % 24 == 0) {                          //use the existing counter remainder when divided by 24
             printf("Press Enter to continue...");
             while (getchar() != '\n')
                 ;
