@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-#define LEN (int) (sizeof(a) / sizeof(a[0]))
+#define LEN (int) (sizeof(a) / sizeof(a[0]))    //work out the length of the array
 
 int main(void)
 {
-    int a[10], i;
+    int a[5], i;
 
     printf("Enter %d numbers: ", LEN);
     for (i = 0; i < LEN; i++)

@@ -7,7 +7,6 @@ int main(void)
     long n;
 
     for (;;) {    
-
         printf("Enter a number (0 to terminate): ");
         scanf("%ld", &n);
         if (n <= 0)
