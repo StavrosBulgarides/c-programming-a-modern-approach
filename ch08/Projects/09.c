@@ -21,7 +21,7 @@ int main(void)
 
     srand((unsigned) time(NULL));
 
-    /* Populate the grid with '.' */
+    /* Populate the grid with '.' once at the start*/
     for (row = 0; row < NUM_ROWS; row++) {
         for (col = 0; col < NUM_COLS; col++) {
             grid[row][col] = '.';
@@ -30,21 +30,21 @@ int main(void)
 
     /* Perform alphabet trail through grid cells */
     row = 0; col = 0;
-    for (letter = 'A'; letter <= 'Z'; letter++) {
+    for (letter = 'A'; letter <= 'Z'; letter++) {   //increment through each letter
 
         grid[row][col] = letter;
 
-        /* Reset potential_move array and count for current cell */
+        /* Reset potential_move array after each move and count for current cell. This is to allow each if statement that follows to start afresh when looking for a move*/
         for (i = 0; i < NUM_MOVES; potential_move[i] = false, i++)
             ; /* empty loop body */
         potential_move_count = 0;
 
-        /* Find all potential moves from the current cell */
+        /* Find all potential moves from the current cell and add them to a count*/
         if (col-1 >= 0 && grid[row][col-1] == EMPTY_CELL) {
             potential_move[LEFT] = true;
             potential_move_count++;
         }
-        if (row+1 < NUM_ROWS && grid[row+1][col] == EMPTY_CELL) {
+        if (row+1 < NUM_ROWS && grid[row+1][col] == EMPTY_CELL) {       //is the next row down empty? empty cell is one that contains '.'
             potential_move[DOWN] = true;
             potential_move_count++;
         }
@@ -61,10 +61,9 @@ int main(void)
         if (potential_move_count == 0)
             break;
 
-        /* Generate random moves until one matches a potential move, then perform 
-         * move */
+        /* Generate random moves from the list of possible moves until one matches a potential move, then perform move */
         while (true) {
-            generated_move = rand() % NUM_MOVES;
+            generated_move = rand() % NUM_MOVES;        //pick a move from the list of possible moves
 
             if (potential_move[generated_move] == true) {
                 switch(generated_move) {

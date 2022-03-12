@@ -18,13 +18,13 @@ int main(void)
     for (i = 0; i < message_length; i++) {
 
         if (message[i] >= 'A' && message[i] <= 'Z') {
-            printf("%c", ((message[i] - 'A') + shift_amount) % 26 + 'A');
+            printf("%c", ((message[i] - 'A') + shift_amount) % 26 + 'A');  //-'A' needed to get to message[0]
         }
-        else if (message[i] >= 'a' && message[i] <= 'z') {
+        else if (message[i] >= 'a' && message[i] <= 'z') {                 //Separate loops to retain upper and lower case
             printf("%c", ((message[i] - 'a') + shift_amount) % 26 + 'a');
         }
         else {
-            printf("%c", message[i]);
+            printf("%c", message[i]);   //retain punctuation as is
         }
 
     }
