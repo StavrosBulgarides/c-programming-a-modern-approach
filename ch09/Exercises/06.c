@@ -1,10 +1,13 @@
 #include <stdio.h>
 
-int digit(int, int);
+int digit(int, int);        //pre-announce the type for digit argument as digit isn't yet defined
 
 int main(void)
 {
-    printf("Digit %d (from right) in %d: %d", 4, 82934, digit(82934, 4));
+    int digit1, digit2;
+    printf("Enter a number and the digit to return (from the right): ");
+    scanf("%d %d", &digit1, &digit2);
+    printf("Digit %d (from right) in %d: %d", digit2, digit1, digit(digit1, digit2));
     return 0;
 }
 

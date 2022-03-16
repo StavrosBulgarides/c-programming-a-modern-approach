@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int gcd(int, int);              //suggest the function content types
+int gcd(int, int);
 
 int main(void)
 {
@@ -13,6 +13,7 @@ int main(void)
     return 0;
 }
 
+/* Returns the greatest common divisor of the two values m and n. */
 int gcd(int m, int n)
 {
     int remainder;
@@ -22,5 +23,6 @@ int gcd(int m, int n)
         m = n;
         n = remainder;
     }
+
     return m;
 }
