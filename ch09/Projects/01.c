@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-void selection_sort(int a[], int n);
+void selection_sort(int a[], int n);        //define type of the function elements before they are first called
 
 int main(void)
 {
     char ch;
     int i, entries = 0, a[30];
     printf("Enter a series of up to 30 integers: ");
-    for (i = 0; i < 30 && (ch = getchar() != '\n'); i++) {
+    for (i = 0; i < 30 && (ch = getchar() != '\n'); i++) {  //add to the array if entry is not return & < 30 char
         scanf(" %d", &a[i]);
-        entries++;
+        entries++;      //keep a count of the entries
     }
 
     printf("Unsorted array: ");
@@ -32,7 +32,7 @@ void selection_sort(int a[], int n)
 {
     if (n == 0) return;
     
-    int i, index_largest = 0;
+    int i, index_largest = 0;       //initial conditions for sort
 
     for (i = 1; i < n; i++) {
         if (a[i] > a[index_largest])
