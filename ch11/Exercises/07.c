@@ -5,10 +5,15 @@ void split_date(int day_of_year, int year, int *month, int *day);
 
 int main(void)
 {
-    int day_of_year = 260, year = 2016, month, day;
+    int day_of_year, year, month, day;
+    printf("Enter day of year: ");
+    scanf("%d", &day_of_year);
+
+    printf("Enter year: ");
+    scanf("%d", &year);
+    
     split_date(day_of_year, year, &month, &day);
-    printf("Day of year: %d, year: %d, month: %d, day: %d\n",
-            day_of_year, year, month, day);
+    printf("Month: %d\nDay: %d\n",month, day);
     return 0;
 }
 
