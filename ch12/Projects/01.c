@@ -24,8 +24,8 @@ int read_message(char a[], int n)
     char ch;
     int i;
     printf("Enter a message: ");
-    for (i = 0; (ch = getchar()) != EOF && ch != '\n'; i++)
-        a[i] = ch;
+    for (i = 0; (ch = getchar()) != EOF && ch != '\n'; i++)     //read characters until newline
+        a[i] = ch;                                              //add the character to the array
 
     return i;
 

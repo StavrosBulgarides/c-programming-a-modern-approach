@@ -1,10 +1,15 @@
-/* Initialise an array */
+#include <stdio.h>
 
-int main (void)
+#define SENT_LEN    10
+
+int main(void)
 {
-    int a[10] = {1,2,3,4,5,6,7,8,9,10};
+    char sentence[SENT_LEN+1];
 
-    printf("%d", a);
+    printf("Enter a sentence:\n");
+    scanf("%s", sentence);
+
+    puts(sentence);
 
     return 0;
 }
